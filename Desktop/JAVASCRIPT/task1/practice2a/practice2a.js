@@ -107,11 +107,33 @@ function weatherAdvice(temperature, isRaining) {
     console.log(advice);
 }
 
+// excercise 4 ATM simulation
+function atm(balance, action, amount) {
+    if (action === "withdraw") {
+        if (amount > 500) {
+            return `Withdrawal limit exceeded. You can only withdraw up to 500 at once`;
+        } else if (balance >= amount) {
+            balance -= amount;
+            return `withdrawal successful. new balance:${balance}`;
+        } else {
+            return `insufficient funds. Your balanec is ${balance}`;
+        }
+    } else if (action === "deposit") {
+        balance += amount;
+        return `deposit successful. new balance:${balance}`;
+    } else {
+        return "Invalid action. please choose 'withdraw' or 'deposit' .";
+    }
+}
+ console.log(atm(20000, "withdraw", 500))
 
 
+ // excercise 5 personal assistant
+function personalAssistant(time,weather,dayType){
+    if (time >= 5 && ,=11){
+        if(dayType == "workday"){
+            console.log("Good morning. Do have a great day at work today!")
+        }else
+    }
+}
 
-//    return weatherAdvice> isRaining ? "Bring Umbrella": notRaining ? "No umbrella needed";
-
-
-// function getShippingCost(orderAmount, isPremium) {
-// return orderAmount > 50 ? 0 : isPremium ? 5 : 10;
